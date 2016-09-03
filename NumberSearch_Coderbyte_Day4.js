@@ -8,18 +8,19 @@
 //also have at least one letter. 
 
 var NumberSearch = function (string) {
-  var count = 0;
-  var numberOfIntegers = 0;
-  var number = 0;
-  for(var i = 0; i < string.length; i++){
-  	if(string[i]/1 !== NaN){
-  		count += parseInt(string[i])
-  		number++
-  	}
-  }
-  console.log(number)
-  console.log(count)
-  return Math.round(count/number)
+  var sum = 0;
+  var numberPattern = /\d+/g;
+  var numbersArray = string.match( numberPattern )
+  var letters = string.replace(/[^a-zA-Z]+/g, '')
+
+  numbersArray.forEach(function(n){
+  	sum += parseInt(n)
+  })
+
+
+ 
+  
+  return Math.round(sum/letters.length)
 }
 
 console.log(NumberSearch("H3ello9-9")) //4
