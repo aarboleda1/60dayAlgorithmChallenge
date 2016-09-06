@@ -16,9 +16,6 @@ var NumberSearch = function (string) {
   numbersArray.forEach(function(n){
   	sum += parseInt(n)
   })
-
-
- 
   
   return Math.round(sum/letters.length)
 }
