@@ -19,7 +19,7 @@ function ListNode(val) {
     this.head = null;
 }
 ListNode.prototype.push = function (val) {
-  	 node = {
+  	 var node = {
   	 	value: val,
   	 	next: null
   	 }
