@@ -53,19 +53,19 @@
 
 /*Create a LinkedList*/
 
-var Node = function (val) {
+let Node = function (val) {
     this.val = val;
 	this.next = null;
 } 
 
-var LinkedList = function () {
+let LinkedList = function () {
 	this.length = 0;
 	this.head = null
 }
 
  LinkedList.prototype.add = function (val) {
-   var node = new Node(val)
-   var currentNode = this.head;
+   let node = new Node(val)
+   let currentNode = this.head;
    //if an empty list
    if(!currentNode){
      this.head = node;
