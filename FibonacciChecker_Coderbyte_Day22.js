@@ -16,9 +16,6 @@ function FibonacciChecker(num) {
         	return 'yes';
         }
     }
-    return 'no';
-    
-  // code goes here  
- 
-         
+    return 'no';   
+  // code goes here           
 }
