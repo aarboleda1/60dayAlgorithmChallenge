@@ -9,9 +9,6 @@ var LinkedList = function () {
  
 }
 
-
-
-
 LinkedList.prototype.add = function (val) {
 	var node = new Node(val);
 	if(!this.head){
@@ -23,8 +20,53 @@ LinkedList.prototype.add = function (val) {
 		}
 		currentNode.next = node;
 	}
-	this.length++
+	this.length++;
 }
+
+
+
+LinkedList.prototype.remove = function (index) {
+	//check to see if it itemAt is inbounds
+	if( index < 0 || index > this.length){
+		return null;
+	} else {
+		//find the index the node
+		//save the node 
+		//delete the node
+		//move previous pointer to next pointer 
+		//return the node;
+		var previousNode;
+		var current = this.head;
+		var counter = 0;
+		//find index of node;
+		while(counter < index){
+			previousNode = current;
+			current = current.next;
+			counter++;
+		}
+		previousNode.next = current.next
+		this.length--
+	}
+	//console.log(previousNode)
+	return current.val;
+}
+LinkedList.prototype.itemAt = function (index) {
+	//check to see if it itemAt is inbounds
+	if( index < 0 || index > this.length){
+		return null;
+	}
+	else {
+		var counter= 0;
+		let currentNode = this.head;
+		
+		while(counter < index){
+			currentNode = currentNode.next;
+			counter++;
+		}
+	return currentNode.val;		
+	}
+}
+
 var numList = new LinkedList ();
 numList.add(1)
 numList.add(2)
