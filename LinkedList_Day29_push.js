@@ -67,6 +67,26 @@ LinkedList.prototype.itemAt = function (index) {
 	}
 }
 
+LinkedList.prototype.removeDups = function () {
+	var previous = this.head;
+	var current = this.head.next;
+	var hash = {};
+	
+	while(current !== null){
+		if(!hash[current.val]){
+			hash[current.val] = true;
+		} else {
+			previous.next = current.next;
+			this.length--
+		}
+
+		previous = current;
+		current = current.next;
+	}
+	
+}
+
+
 var numList = new LinkedList ();
 numList.add(1)
 numList.add(2)
