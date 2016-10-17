@@ -79,7 +79,7 @@ LinkedList.prototype.removeDups = function () {
 			previous.next = current.next;
 			this.length--
 		}
-
+		//deletion of the node so we can keep looping thru;
 		previous = current;
 		current = current.next;
 	}
