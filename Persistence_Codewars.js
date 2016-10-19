@@ -8,14 +8,13 @@
 
  //persistence(4) === 0 // because 4 is already a one-digit number
  
- var persistence = function (num) {
- 	var count = 0;
+const persistence = num => {
+ 	let count = 0;
  	if(num < 10 ) {
  		return count
  	} else {
  		while (num >= 10) {
- 			num = num.toString().split('')
- 			num = num.reduce(function (product, num) {
+ 			num = num.toString().split('').reduce((product, num) => {
  				return product * num
  			},1)
  		count++
@@ -24,6 +23,8 @@
  	} 
  	
  }
+ persistence(25)
+//persistence(4)
  persistence(25)
  //persistence(4)
 /*
